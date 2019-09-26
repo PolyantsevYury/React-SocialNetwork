@@ -1,0 +1,14 @@
+.item {
+    color: whitesmoke;
+    margin: 10px;
+}
+
+.item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+}
+
+.like {
+    margin-top: 10px;
+}
