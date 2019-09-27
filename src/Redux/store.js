@@ -29,7 +29,7 @@ let store = {
             ],
             newMessageText: 'New'
         },
-        siteBar: {
+        sideBar: {
             firstFriend: [
                 {img: '#', name: 'Elon'}
             ],
@@ -56,7 +56,7 @@ let store = {
     dispatch(action) {
         this._state.profilePage = profileReducer(this._state.profilePage, action);
         this._state.dialogsPage = dialogsReducer(this._state.dialogsPage, action);
-        this._state.siteBar = sidebarReducer(this._state.siteBar, action);
+        this._state.sideBar = sidebarReducer(this._state.sideBar, action);
 
         this._callSubscriber(this._state);
     },
