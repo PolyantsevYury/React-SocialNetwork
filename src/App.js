@@ -13,7 +13,7 @@ const App = (props) => {
     return (
         <div className='app-wrapper'>
             <Header/>
-            <Navbar state={props.state.sideBar}/>
+            <Navbar state={props.store}/>
             <div className='app-wrapper-content'>
                 <Route path="/dialogs"
                        render={() => <DialogsContainer store={props.store} /> }/>
