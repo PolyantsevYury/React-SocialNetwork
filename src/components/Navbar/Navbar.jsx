@@ -4,7 +4,7 @@ import {NavLink} from "react-router-dom";
 import Friends from "./Friends/Friends.jsx";
 
 const Navbar = (props) => {
-    let firstFriendName = props.state.firstFriend.map( n => (<Friends name={n.name} />) );
+    // let firstFriendName = props.state.firstFriend.map( n => (<Friends name={n.name} />) );
     return (
         <nav className={classes.nav}>
 
@@ -30,7 +30,7 @@ const Navbar = (props) => {
             </div>
 
         </div>
-            {firstFriendName}
+            {/*{firstFriendName}*/}
         </nav>
     )
 };
