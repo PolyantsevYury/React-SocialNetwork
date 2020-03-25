@@ -1,49 +1,62 @@
 import React from 'react';
-import s from './Dialogs.module.css'
-import Message from "./Message/Message";
+import s from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 import {Redirect} from "react-router-dom";
+import {Field, reduxForm} from "redux-form";
+import AddMessageForm from "./AddMessageForm/AddMessageForm";
 
 const Dialogs = (props) => {
 
-    let dialogsElements = props.dialogs.map(d => <DialogItem name={d.name} id={d.id}/>);
-    let messagesElements = props.messages.map(m => <Message message={m.message}/>);
+    let state = props.dialogsPage;
 
-    let newMessageElement = React.createRef();
+    let dialogsElements = state.dialogs.map( d => <DialogItem name={d.name} key={d.id} id={d.id} />  );
+    let messagesElements = state.messages.map( m => <Message message={m.message} key={m.id} /> );
+    let newMessageBody = state.newMessageBody;
 
-    let sendMessage = () => {
-        props.sendMessage();
-    };
+    let addNewMessage = (values) => {
+        props.sendMessage(values.newMessageBody);
+    }
 
-    let onMessageChange = () => {
-        let text = newMessageElement.current.value;
-        props.updateNewMessageText(text);
-    };
-
-    if (!props.isAuth) return <Redirect to={"/login"} />;
+    if (!props.isAuth) return <Redirect to={"/login"} /> ;
 
     return (
         <div className={s.dialogs}>
             <div className={s.dialogsItems}>
-                {dialogsElements}
+                { dialogsElements }
             </div>
-
             <div className={s.messages}>
-                {messagesElements}
-
-                <div>
-                    <div>
-                        <textarea onChange={onMessageChange} ref={newMessageElement}
-                                  value={props.newMessageText} />
-                    </div>
-                    <div>
-                        <button onClick={sendMessage}>Send Message</button>
-                    </div>
-                </div>
+                <div>{ messagesElements }</div>
 
             </div>
+            <AddMessageForm onSubmit={addNewMessage} />
         </div>
     )
-};
+}
 
 export default Dialogs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

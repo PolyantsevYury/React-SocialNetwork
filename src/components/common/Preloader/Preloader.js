@@ -1,8 +1,10 @@
-import loader3 from "../../../assets/images/loader3.svg";
+import preloader from "../../../assets/images/loader3.svg";
 import React from "react";
 
-let Loader = (props) => {
-   return <img src={loader3} />
-  };
+let Preloader = (props) => {
+    return <div  style={ { backgroundColor: 'white' } }>
+        <img src={preloader} />
+    </div>
+}
 
-export default Loader;
+export default Preloader;
