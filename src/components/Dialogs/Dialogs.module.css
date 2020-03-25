@@ -8,13 +8,12 @@
     padding: 10px;
 }
 
-.dialogsItems .active {
-    color: white;
+.dialog a {
+    text-decoration: none;
 }
 
-.dialog a {
-    color: #afafaf;
-    text-decoration: none;
+.dialog a.activeLink {
+    color: white;
 }
 
 .messages {
