@@ -3,19 +3,31 @@
     background-color: #1c1c1c;
     padding: 20px;
     display: flex;
+    flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
-    height: 89vh;
+    height: 90vh;
+    /*min-width: 200px;*/
 }
 
 .mainNav {
+    height: auto;
+    margin: 10px;
+}
 
+.item {
+    font-size: 20px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
 }
 
 .item a {
     color: #afafaf;
     text-decoration: none;
+    margin-left: 10px;
 }
+
 .item a.activeLink {
     color: white;
 }

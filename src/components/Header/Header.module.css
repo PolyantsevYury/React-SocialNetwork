@@ -1,12 +1,17 @@
 .header {
     grid-area: h;
-    background-color: #272727;
+    background-color: #222222;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .header img {
     width: 60px;
+    margin-left: 40px;
 }
 
 .loginBlock {
-    float: right;
+    margin: 20px;
+    font-size: 20px;
 }
