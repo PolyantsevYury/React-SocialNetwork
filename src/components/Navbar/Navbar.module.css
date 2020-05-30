@@ -22,12 +22,15 @@
     align-items: center;
 }
 
-.item a {
+a {
     color: #afafaf;
     text-decoration: none;
+}
+
+span {
     margin-left: 10px;
 }
 
-.item a.activeLink {
+a.activeLink {
     color: white;
 }

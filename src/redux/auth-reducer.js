@@ -19,11 +19,11 @@ const authReducer = (state = initialState, action) => {
             return {
                 ...state,
                 ...action.payload
-            }
+            };
         default:
             return state;
     }
-}
+};
 
 
 export const setAuthUserData = (userId, email, login, isAuth) => ({
@@ -42,7 +42,7 @@ export const getAuthUserData = () => async (dispatch) => {
         let {id, login, email} = response.data.data;
         dispatch(setAuthUserData(id, email, login, true));
     }
-}
+};
 
 export const login = (email, password, rememberMe, captcha) => async (dispatch) => {
     let response = await authAPI.login(email, password, rememberMe, captcha);
@@ -57,13 +57,13 @@ export const login = (email, password, rememberMe, captcha) => async (dispatch) 
         let message = response.data.messages.length > 0 ? response.data.messages[0] : "Some error";
         dispatch(stopSubmit("login", {_error: message}));
     }
-}
+};
 
 export const getCaptchaUrl = () => async (dispatch) => {
     const response = await securityAPI.getCaptchaUrl();
     const captchaUrl = response.data.url;
     dispatch(getCaptchaUrlSuccess(captchaUrl));
-}
+};
 
 
 
@@ -73,6 +73,6 @@ export const logout = () => async (dispatch) => {
     if (response.data.resultCode === 0) {
         dispatch(setAuthUserData(null, null, null, false));
     }
-}
+};
 
 export default authReducer;

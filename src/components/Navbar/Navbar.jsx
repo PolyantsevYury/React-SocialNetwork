@@ -8,31 +8,42 @@ const Navbar = () => {
     return (
         <nav className={classes.nav}>
             <div className={classes.mainNav}>
-                <div className={classes.item}>
-                    <AuditOutlined />
-                    <NavLink to="/profile" activeClassName={classes.activeLink}>Profile</NavLink>
+                <div>
+                    <NavLink to="/profile"  className={classes.item} activeClassName={classes.activeLink}>
+                        <AuditOutlined />
+                        <span>Profile</span>
+                    </NavLink>
                 </div>
-                <div className={classes.item}>
-                    <MessageOutlined />
-                    <NavLink to="/dialogs" activeClassName={classes.activeLink}>Messages</NavLink>
+                <div>
+                    <NavLink to="/dialogs" className={classes.item} activeClassName={classes.activeLink}>
+                        <MessageOutlined />
+                        <span>Messages</span>
+                    </NavLink>
                 </div>
-                <div className={classes.item}>
-                    <UserOutlined />
-                    <NavLink to="/users" activeClassName={classes.activeLink}>Users</NavLink>
+                <div>
+                    <NavLink to="/users" className={classes.item} activeClassName={classes.activeLink}>
+                        <UserOutlined />
+                        <span>Users</span>
+                    </NavLink>
                 </div>
-                <div className={classes.item}>
-                    <SnippetsOutlined />
-                    <NavLink to="/news" activeClassName={classes.activeLink}>News</NavLink>
+                <div>
+                    <NavLink to="/news" className={classes.item} activeClassName={classes.activeLink}>
+                        <SnippetsOutlined />
+                        <span>News</span>
+                    </NavLink>
                 </div>
-                <div className={classes.item}>
-                    <SoundOutlined />
-                    <NavLink to="/music" activeClassName={classes.activeLink}>Music</NavLink>
+                <div>
+                    <NavLink to="/music" className={classes.item} activeClassName={classes.activeLink}>
+                        <SoundOutlined />
+                        <span>Music</span>
+                    </NavLink>
                 </div>
-                <div className={classes.item}>
-                    <ToolOutlined />
-                    <NavLink to="/settings" activeClassName={classes.activeLink}>Settings</NavLink>
+                <div>
+                    <NavLink to="/settings" className={classes.item} activeClassName={classes.activeLink}>
+                        <ToolOutlined />
+                        <span>Settings</span>
+                    </NavLink>
                 </div>
-
             </div>
         </nav>
     )
