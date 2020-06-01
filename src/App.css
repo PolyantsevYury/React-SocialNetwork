@@ -14,5 +14,7 @@
 .app-wrapper-content {
     grid-area: c;
     background-color: #121212;
+    padding: 40px;
+    border-left: 1px solid dimgray;
 }
 

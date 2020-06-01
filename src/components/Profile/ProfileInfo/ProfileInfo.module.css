@@ -1,9 +1,21 @@
 .descriptionBlock {
-    padding: 10px;
+    display: flex;
+}
+
+.photoBlock {
+    display: flex;
+    flex-direction: column;
+}
+
+.choosePhoto {
+    margin-top: 15px;
 }
 
 .mainPhoto {
-    max-width: 200px;
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    margin-bottom: 15px;
 }
 
 .contact {
