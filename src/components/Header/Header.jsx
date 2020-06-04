@@ -3,10 +3,12 @@ import s from './Header.module.css'
 import {NavLink} from "react-router-dom";
 import { Avatar } from 'antd';
 import { UserOutlined } from '@ant-design/icons';
+import logo from './../common/images/react_logo.png'
 
 const Header = (props) => {
     return <header className={s.header}>
-        <img src="https://dev-gang.ru/static/storage/24808028622541768947383165896446886988.png" alt="#"/>
+        {/*<img src="https://dev-gang.ru/static/storage/24808028622541768947383165896446886988.png" alt="#"/>*/}
+        <img src={logo} alt="logo"/>
 
         <div className={s.loginBlock}>
             {props.isAuth ?
