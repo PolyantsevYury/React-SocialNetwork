@@ -6,7 +6,6 @@
     flex-wrap: nowrap;
     flex-direction: column;
     justify-content: space-between;
-    height: 90vh;
 }
 
 .mainNav {
@@ -26,10 +25,14 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: white;
+}
+
 span {
     margin-left: 10px;
 }
 
 a.activeLink {
-    color: white;
+    color: #09d9fe;
 }
