@@ -26,22 +26,28 @@ class UsersContainer extends React.Component {
     onPageChanged = (pageNumber) => {
         const {pageSize} = this.props;
         this.props.getUsers(pageNumber, pageSize);
-    }
+    };
 
     render() {
-
-        return <>
-            {this.props.isFetching ? <Preloader/> : null}
-            <Users totalUsersCount={this.props.totalUsersCount}
-                   pageSize={this.props.pageSize}
-                   currentPage={this.props.currentPage}
-                   onPageChanged={this.onPageChanged}
-                   users={this.props.users}
-                   follow={this.props.follow}
-                   unfollow={this.props.unfollow}
-                   followingInProgress={this.props.followingInProgress}
-            />
-        </>
+        return (
+            <div className='main-wrapper'>
+                <div className='main-content'>
+                    {this.props.isFetching ? <Preloader/> : null}
+                    <Users totalUsersCount={this.props.totalUsersCount}
+                           pageSize={this.props.pageSize}
+                           currentPage={this.props.currentPage}
+                           onPageChanged={this.onPageChanged}
+                           users={this.props.users}
+                           follow={this.props.follow}
+                           unfollow={this.props.unfollow}
+                           followingInProgress={this.props.followingInProgress}
+                    />
+                </div>
+                <div className='main-side'>
+                    something
+                </div>
+            </div>
+        )
     }
 }
 
@@ -54,7 +60,7 @@ let mapStateToProps = (state) => {
         isFetching: getIsFetching(state),
         followingInProgress: getFollowingInProgress(state)
     }
-}
+};
 
 
 export default compose(

@@ -1,21 +1,58 @@
 @import '~antd/dist/antd.css';
 
 .app-wrapper {
-    display: grid;
-
-    grid-template-areas: "h h" "n c";
-
-    grid-template-rows: 60px 1fr;
-    grid-template-columns: 2fr 14fr;
-
     min-height: 100vh;
     color: #afafaf;
+    background-color: #181818;
+}
+
+.header {
+
 }
 
 .app-wrapper-content {
-    grid-area: c;
-    background-color: #181818;
-    padding: 40px;
-    /*border-left: 1px solid dimgray;*/
+    display: flex;
+    height: 100%;
+    align-items: stretch;
+    flex-basis: auto;
+    flex-shrink: 0;
 }
 
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-basis: auto;
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+.nav-wrapper {
+    width: 275px;
+    padding: 20px;
+}
+
+.main {
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.main-wrapper{
+    display: flex;
+}
+
+.main-content {
+    display: flex;
+    flex-basis: auto;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+    width: 600px;
+    border-right: 1px solid darkslategray;
+    border-left: 1px solid darkslategray;
+    padding: 10px;
+}
+
+.main-side {
+    width: 300px;
+}

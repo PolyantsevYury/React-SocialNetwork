@@ -37,29 +37,37 @@ class App extends Component {
 
         return (
             <div className='app-wrapper'>
-                <HeaderContainer/>
-                <Navbar/>
+                <div className='header'>
+                    <HeaderContainer/>
+                </div>
                 <div className='app-wrapper-content'>
-                    <Switch>
-                        <Route exact path='/'
-                               render={() => <Redirect to={"/profile"}/>}/>
+                    <div className='nav'>
+                        <div className='nav-wrapper'>
+                            <Navbar/>
+                        </div>
+                    </div>
+                    <div className='main'>
+                        <Switch>
+                            <Route exact path='/'
+                                   render={() =>
+                                       <Redirect to={"/profile"}/>
+                                   }/>
+                            <Route path='/dialogs'
+                                   render={withSuspense(DialogsContainer)}/>
 
-                        <Route path='/dialogs'
-                               render={withSuspense(DialogsContainer)}/>
+                            <Route path='/profile/:userId?'
+                                   render={withSuspense(ProfileContainer)}/>
 
-                        <Route path='/profile/:userId?'
-                               render={withSuspense(ProfileContainer)}/>
+                            <Route path='/users'
+                                   render={() => <UsersContainer/>}/>
 
-                        <Route path='/users'
-                               render={() => <UsersContainer/>}/>
+                            <Route path='/login'
+                                   render={() => <LoginPage/>}/>
 
-                        <Route path='/login'
-                               render={() => <LoginPage/>}/>
-
-                        <Route path='*'
-                               render={() => <div>404 NOT FOUND</div>}/>
-                    </Switch>
-
+                            <Route path='*'
+                                   render={() => <div>404 NOT FOUND</div>}/>
+                        </Switch>
+                    </div>
                 </div>
             </div>
         )
