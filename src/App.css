@@ -48,6 +48,7 @@
     align-items: stretch;
     position: relative;
     width: 600px;
+    min-height: 100vh;
     border-right: 1px solid darkslategray;
     border-left: 1px solid darkslategray;
     padding: 10px;

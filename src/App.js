@@ -13,6 +13,10 @@ import Preloader from "./components/common/Preloader/Preloader";
 import store from "./redux/redux-store";
 import {withSuspense} from "./hoc/withSuspense";
 
+import Music from "./components/Music/Music";
+import Settings from "./components/Settings/Settings";
+import News from "./components/News/News";
+
 const DialogsContainer = React.lazy(() => import('./components/Dialogs/DialogsContainer'));
 const ProfileContainer = React.lazy(() => import('./components/Profile/ProfileContainer'));
 
@@ -63,6 +67,15 @@ class App extends Component {
 
                             <Route path='/login'
                                    render={() => <LoginPage/>}/>
+
+                            <Route path='/settings'
+                                   render={() => <Settings/>}/>
+
+                            <Route path='/news'
+                                   render={() => <News/>}/>
+
+                            <Route path='/music'
+                                   render={() => <Music/>}/>
 
                             <Route path='*'
                                    render={() => <div>404 NOT FOUND</div>}/>
