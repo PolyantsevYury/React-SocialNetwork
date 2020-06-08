@@ -46,9 +46,7 @@ class App extends Component {
                 </div>
                 <div className='app-wrapper-content'>
                     <div className='nav'>
-                        <div className='nav-wrapper'>
-                            <Navbar/>
-                        </div>
+                        <Navbar/>
                     </div>
                     <div className='main'>
                         <Switch>
@@ -80,6 +78,9 @@ class App extends Component {
                             <Route path='*'
                                    render={() => <div>404 NOT FOUND</div>}/>
                         </Switch>
+                    </div>
+                    <div className='sidebar'>
+                        side bar
                     </div>
                 </div>
             </div>

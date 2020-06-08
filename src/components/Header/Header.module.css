@@ -1,17 +1,31 @@
 .header {
-    background-color: #202020;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     height: 60px;
+    border-bottom: 1px solid #343434;
 }
 
-.header img {
+.logoContainer {
+    width: 300px;
+}
+
+.logoContainer img {
     max-width: 130px;
     margin-left: 30px;
 }
 
-.loginBlock {
-    margin: 20px;
+.middleContainer {
+    width: 600px;
+}
+
+.userContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 300px;
+}
+
+.userInfo {
+    display: flex;
     font-size: 20px;
 }
