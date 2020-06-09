@@ -1,5 +1,6 @@
 .descriptionBlock {
     display: flex;
+    justify-content: space-around;
 }
 
 .photoBlock {
@@ -7,8 +8,12 @@
     flex-direction: column;
 }
 
-.choosePhoto {
+.userInfo button{
     margin-top: 15px;
+}
+
+.choosePhoto {
+    margin-bottom: 15px;
 }
 
 .mainPhoto {

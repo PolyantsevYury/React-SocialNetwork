@@ -1,11 +1,26 @@
 .postsBlock {
-    margin-top: 20px;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .postsBlock h2 {
     color: #afafaf;
 }
 
+.field {
+    width: 100%;
+    text-align: center;
+}
+
+.fieldForm {
+    width: 100%;
+}
+
 .posts {
+    display: flex;
+    flex-direction: column;
     margin-top: 10px;
+    align-self: flex-start;
 }

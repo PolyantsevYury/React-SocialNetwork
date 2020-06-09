@@ -20,22 +20,15 @@ const Dialogs = (props) => {
     if (!props.isAuth) return <Redirect to={"/login"} /> ;
 
     return (
-        <div className='main-wrapper'>
-            <div className='main-content'>
-                <div className={s.dialogs}>
-                    <div className={s.dialogsItems}>
-                        {dialogsElements}
-                    </div>
-                    <div className={s.messages}>
-                        <div>{messagesElements}</div>
+        <div className={s.dialogs}>
+            <div className={s.dialogsItems}>
+                {dialogsElements}
+            </div>
+            <div className={s.messages}>
+                <div>{messagesElements}</div>
 
-                    </div>
-                    <AddMessageForm onSubmit={addNewMessage}/>
-                </div>
             </div>
-            <div className='main-side'>
-                something
-            </div>
+            <AddMessageForm onSubmit={addNewMessage}/>
         </div>
     )
 };

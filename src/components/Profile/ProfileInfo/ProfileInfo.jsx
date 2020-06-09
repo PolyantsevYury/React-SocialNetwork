@@ -30,9 +30,9 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
     return (
         <div className={s.descriptionBlock}>
             <div className={s.photoBlock}>
+                {isOwner && <input className={s.choosePhoto} type={"file"} onChange={onMainPhotoSelected}/>}
                 <img src={profile.photos.large || userPhoto} className={s.mainPhoto}/>
                 <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
-                {isOwner && <input className={s.choosePhoto} type={"file"} onChange={onMainPhotoSelected}/>}
             </div>
 
             {editMode
@@ -45,8 +45,7 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
 }
 
 const ProfileData = ({profile, isOwner, goToEditMode}) => {
-    return <div>
-        {isOwner && <div><button onClick={goToEditMode}>Edit profile</button></div>}
+    return <div className={s.userInfo}>
         <div>
             <b>Full name</b>: {profile.fullName}
         </div>
@@ -67,6 +66,7 @@ const ProfileData = ({profile, isOwner, goToEditMode}) => {
             return <Contact key={key} contactTitle={key} contactValue={profile.contacts[key]}/>
         })}
         </div>
+        {isOwner && <div><button onClick={goToEditMode}>Edit profile</button></div>}
     </div>
 }
 
