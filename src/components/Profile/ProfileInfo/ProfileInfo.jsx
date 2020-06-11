@@ -4,6 +4,7 @@ import Preloader from "../../common/Preloader/Preloader";
 import ProfileStatusWithHooks from "./ProfileStatusWithHooks";
 import userPhoto from "../../../assets/images/user.png";
 import ProfileDataForm from "./ProfileDataForm";
+import {CameraOutlined} from "@ant-design/icons";
 
 const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, saveProfile}) => {
 
@@ -30,16 +31,23 @@ const ProfileInfo = ({profile, status, updateStatus, isOwner, savePhoto, savePro
     return (
         <div className={s.descriptionBlock}>
             <div className={s.photoBlock}>
-                {isOwner && <input className={s.choosePhoto} type={"file"} onChange={onMainPhotoSelected}/>}
-                <img src={profile.photos.large || userPhoto} className={s.mainPhoto}/>
-                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
+                <div className={s.photo}>
+                    <img src={profile.photos.large || userPhoto} className={s.mainPhoto}/>
+                    {isOwner && <label className={s.customFileUpload}>
+                                    <input type={"file"} onChange={onMainPhotoSelected}/>
+                                    <CameraOutlined />
+                                </label>}
+                </div>
             </div>
-
+            <div>
+                <span>{profile.fullName}</span>
+                <ProfileStatusWithHooks status={status} updateStatus={updateStatus}/>
             {editMode
                 ? <ProfileDataForm initialValues={profile} profile={profile} onSubmit={onSubmit}/>
                 : <ProfileData goToEditMode={() => {
                     setEditMode(true)
                 }} profile={profile} isOwner={isOwner}/>}
+            </div>
         </div>
     )
 }

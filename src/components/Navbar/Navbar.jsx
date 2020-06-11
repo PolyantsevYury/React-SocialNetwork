@@ -11,37 +11,37 @@ const Navbar = () => {
                 <div>
                     <NavLink to="/profile"  className={classes.item} activeClassName={classes.activeLink}>
                         <AuditOutlined />
-                        <span>Profile</span>
+                        <span className={classes.navText}>Profile</span>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/dialogs" className={classes.item} activeClassName={classes.activeLink}>
                         <MessageOutlined />
-                        <span>Messages</span>
+                        <span className={classes.navText}>Messages</span>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/users" className={classes.item} activeClassName={classes.activeLink}>
                         <UserOutlined />
-                        <span>Users</span>
+                        <span className={classes.navText}>Users</span>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/news" className={classes.item} activeClassName={classes.activeLink}>
                         <SnippetsOutlined />
-                        <span>News</span>
+                        <span className={classes.navText}>News</span>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/music" className={classes.item} activeClassName={classes.activeLink}>
                         <SoundOutlined />
-                        <span>Music</span>
+                        <span className={classes.navText}>Music</span>
                     </NavLink>
                 </div>
                 <div>
                     <NavLink to="/settings" className={classes.item} activeClassName={classes.activeLink}>
                         <ToolOutlined />
-                        <span>Settings</span>
+                        <span className={classes.navText}>Settings</span>
                     </NavLink>
                 </div>
             </div>

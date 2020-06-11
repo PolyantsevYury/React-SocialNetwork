@@ -7,7 +7,6 @@
 
 .mainNav {
     height: auto;
-    margin: 10px;
 }
 
 .item {
@@ -26,7 +25,7 @@ a:hover {
     color: white;
 }
 
-span {
+.navText {
     margin-left: 10px;
 }
 

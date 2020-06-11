@@ -19,18 +19,23 @@
 
 .nav {
     display: flex;
-    width: 300px;
+    width: 220px;
     padding: 20px;
 }
 
 .main {
-    width: 600px;
+    margin: 0 10px;
+    width: 720px;
     border-radius: 5px;
-    background-color: #222222;
+    background-color: #212121;
+    border: 1px solid #303030;
     padding: 20px;
 }
 
 .sidebar {
     width: 300px;
+    border-radius: 5px;
+    background-color: #212121;
+    border: 1px solid #303030;
     padding: 20px;
 }

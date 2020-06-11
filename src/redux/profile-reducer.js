@@ -3,6 +3,7 @@ import {stopSubmit} from "redux-form";
 
 const ADD_POST = 'ADD-POST';
 const SET_USER_PROFILE = 'SET_USER_PROFILE';
+const SET_AUTHORIZED_PROFILE = 'SET_AUTHORIZED_PROFILE';
 const SET_STATUS = 'SET_STATUS';
 const DELETE_POST = 'DELETE_POST';
 const SAVE_PHOTO_SUCCESS = 'SAVE_PHOTO_SUCCESS';
@@ -14,6 +15,7 @@ let initialState = {
         {id: 3, message: 'Blabla', likesCount: 11},
         {id: 4, message: 'Dada', likesCount: 11}
     ],
+    authorizedProfile: null,
     profile: null,
     status: ""
 };
@@ -42,6 +44,9 @@ const profileReducer = (state = initialState, action) => {
         case SET_USER_PROFILE: {
             return {...state, profile: action.profile}
         }
+        case SET_AUTHORIZED_PROFILE: {
+            return {...state, authorizedProfile: action.profile}
+        }
 
         case DELETE_POST:
             return {...state, posts: state.posts.filter(p => p.id != action.postId)};
@@ -57,13 +62,14 @@ const profileReducer = (state = initialState, action) => {
 
 export const addPostActionCreator = (newPostText) => ({type: ADD_POST, newPostText});
 export const setUserProfile = (profile) => ({type: SET_USER_PROFILE, profile});
+export const setAuthorizedProfile = (profile) => ({type: SET_AUTHORIZED_PROFILE, profile});
 export const setStatus = (status) => ({type: SET_STATUS, status});
 export const deletePost = (postId) => ({type: DELETE_POST, postId});
 export const savePhotoSuccess = (photos) => ({type: SAVE_PHOTO_SUCCESS, photos});
 
-export const getUserProfile = (userId) => async (dispatch) => {
+export const getUserProfile = (userId, myProfile = false) => async (dispatch) => {
     const response = await usersAPI.getProfile(userId);
-    dispatch(setUserProfile(response.data));
+    myProfile ? dispatch(setAuthorizedProfile(response.data)) : dispatch(setUserProfile(response.data));
 };
 
 export const getStatus = (userId) => async (dispatch) => {

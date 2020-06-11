@@ -6,16 +6,17 @@
 }
 
 .logoContainer {
-    width: 300px;
+    width: 220px;
+    padding: 0 20px;
 }
 
 .logoContainer img {
     max-width: 130px;
-    margin-left: 30px;
 }
 
 .middleContainer {
-    width: 600px;
+    width: 720px;
+    margin: 0 10px;
 }
 
 .userContainer {
