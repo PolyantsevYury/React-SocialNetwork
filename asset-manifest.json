@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/social-network/static/css/main.869d573d.chunk.css",
+    "main.js": "/social-network/static/js/main.48399f8f.chunk.js",
+    "main.js.map": "/social-network/static/js/main.48399f8f.chunk.js.map",
+    "runtime~main.js": "/social-network/static/js/runtime~main.c76af230.js",
+    "runtime~main.js.map": "/social-network/static/js/runtime~main.c76af230.js.map",
+    "static/css/2.63b65d4e.chunk.css": "/social-network/static/css/2.63b65d4e.chunk.css",
+    "static/js/2.b366ea0d.chunk.js": "/social-network/static/js/2.b366ea0d.chunk.js",
+    "static/js/2.b366ea0d.chunk.js.map": "/social-network/static/js/2.b366ea0d.chunk.js.map",
+    "static/css/3.1529dd3d.chunk.css": "/social-network/static/css/3.1529dd3d.chunk.css",
+    "static/js/3.de3b9564.chunk.js": "/social-network/static/js/3.de3b9564.chunk.js",
+    "static/js/3.de3b9564.chunk.js.map": "/social-network/static/js/3.de3b9564.chunk.js.map",
+    "static/css/4.c74ea037.chunk.css": "/social-network/static/css/4.c74ea037.chunk.css",
+    "static/js/4.8f6e8c55.chunk.js": "/social-network/static/js/4.8f6e8c55.chunk.js",
+    "static/js/4.8f6e8c55.chunk.js.map": "/social-network/static/js/4.8f6e8c55.chunk.js.map",
+    "index.html": "/social-network/index.html",
+    "precache-manifest.cdcb78da37ced71e5bead03e72837ea4.js": "/social-network/precache-manifest.cdcb78da37ced71e5bead03e72837ea4.js",
+    "service-worker.js": "/social-network/service-worker.js",
+    "static/css/2.63b65d4e.chunk.css.map": "/social-network/static/css/2.63b65d4e.chunk.css.map",
+    "static/css/3.1529dd3d.chunk.css.map": "/social-network/static/css/3.1529dd3d.chunk.css.map",
+    "static/css/4.c74ea037.chunk.css.map": "/social-network/static/css/4.c74ea037.chunk.css.map",
+    "static/css/main.869d573d.chunk.css.map": "/social-network/static/css/main.869d573d.chunk.css.map",
+    "static/media/loader3.svg": "/social-network/static/media/loader3.8339405d.svg",
+    "static/media/react_logo.png": "/social-network/static/media/react_logo.7a95ca84.png"
+  }
+}
