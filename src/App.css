@@ -4,6 +4,7 @@
     /*color: #afafaf;*/
     color: #dedede;
     background-color: #181818;
+    min-height: 100vh;
 }
 
 .header {

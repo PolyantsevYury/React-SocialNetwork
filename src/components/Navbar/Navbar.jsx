@@ -9,7 +9,7 @@ const Navbar = () => {
         <nav className={classes.nav}>
             <div className={classes.mainNav}>
                 <div>
-                    <NavLink to="/profile"  className={classes.item} activeClassName={classes.activeLink}>
+                    <NavLink to="/profile" className={classes.item} activeClassName={classes.activeLink}>
                         <AuditOutlined />
                         <span className={classes.navText}>Profile</span>
                     </NavLink>
